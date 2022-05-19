@@ -120,13 +120,15 @@
           </h3>
         </div>
       </div>
-      <form class="form">
+      <form class="form" id="form">
         <div class="row bord p-5 shadow m-5">
           <div class="col-sm-6">
+            <!--Nombre-->
             <div class="mt-3">
               <label for="fName" class="form-label">First Name:</label>
               <input
                 id="fName"
+                name="name"
                 class="form-control ml-3"
                 type="text"
                 placeholder="First Name"
@@ -135,10 +137,12 @@
                 This field is required and must have, at least, 3 characters
               </div>
             </div>
-            <div class="mt-3">
+            <!--Email-->
+            <div class="mt-3" >
               <label for="fEmail" class="form-label">Email:</label>
               <input
                 id="fEmail"
+                name="email"
                 class="form-control ml-3"
                 type="email"
                 placeholder="Email"
@@ -149,10 +153,12 @@
                 least, 3 characters
               </div>
             </div>
-            <div class="mt-3">
+            <!--Address-->
+            <div class="mt-3" >
               <label for="fAddress" class="form-label">Address:</label>
               <input
                 id="fAddress"
+                name="address"
                 class="form-control"
                 type="text"
                 placeholder="Address"
@@ -164,10 +170,12 @@
             </div>
           </div>
           <div class="col-sm-6">
-            <div class="mt-3">
+            <!--LastN-->
+            <div class="mt-3" >
               <label for="fLastN" class="form-label">Last Name:</label>
               <input
                 id="fLastN"
+                name="lastName"
                 class="form-control"
                 type="text"
                 placeholder="Last Name"
@@ -177,10 +185,12 @@
                 This field is required and must have, at least, 3 characters
               </div>
             </div>
-            <div class="mt-3">
+            <!--Password-->
+            <div class="mt-3" >
               <label for="fPassword" class="form-label">Password:</label>
               <input
                 id="fPassword"
+                name="password"
                 class="form-control"
                 title="(4-8 characters)"
                 type="password"
@@ -192,10 +202,12 @@
                 Enter a correct password
               </div>
             </div>
+            <!--phone-->
             <div class="mt-3">
               <label for="fPhone" class="form-label">Phone Number:</label>
               <input
                 id="fPhone"
+                name="phone"
                 class="form-control"
                 type="number"
                 placeholder="Phone No."
@@ -205,6 +217,7 @@
               </div>
             </div>
           </div>
+          <!--Validacion Final-->
           <div class="col-12 mt-4 final">
             <button
               type="submit"
