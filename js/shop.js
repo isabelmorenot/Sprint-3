@@ -124,6 +124,7 @@ function buy(id) {
   for (let i=0;i<products.length;i++){
     if(products[i].id == id){
       cartList.push(products[i]);
+      document.getElementById("count_product").innerHTML=cartList.length;
     }  
   }
   //console.log(cartList);
@@ -133,10 +134,11 @@ function buy(id) {
 
 // Exercise 2
 function cleanCart() {
-  //1
   cartList.length = 0;
-  //2
-  cartList=[];
+  cart.length=0;
+  document.getElementById("cart_list").innerHTML= "";
+  document.getElementById("count_product").innerHTML=0;
+  var total_price=document.getElementById("total_price").innerHTML=0;
 }
 
 // Exercise 3
@@ -207,17 +209,18 @@ function addToCart(id) {
 function removeFromCart(id) {
   // 1. Loop for to the array products to get the item to add to cart
   // 2. Add found product to the cartList array
+
+
 }
 
-// Exercise 9
+// Exercise 6
 
 function printCart() {
   // Fill the shopping cart modal manipulating the shopping cart dom
-  
   console.log("Open Modal");
-  //var cartModal = document.getElementById("cartModal");
   document.getElementById("cart_list").innerHTML= "";
   let cart_list =document.getElementById("cart_list");
+  
 
   for(let i =0; i<cart.length;i++){
     let row1 = document.createElement("tr");
@@ -227,14 +230,13 @@ function printCart() {
     price.innerHTML="$"+cart[i].price;
     let  quantity = document.createElement("td");
     quantity.innerHTML=cart[i].quantity;
-
     let  subtotal = document.createElement("td");
+
     if (cart[i].subtotalWithDiscount != 0 ){
       subtotal.innerHTML="$"+ cart[i].subtotalWithDiscount;
     }else{
       subtotal.innerHTML="$"+ cart[i].subtotal;
     }
-
     cart_list.appendChild(row1);
     row1.appendChild(name);
     row1.appendChild(price);
@@ -248,5 +250,4 @@ function printCart() {
 
 function open_modal() {
   printCart();
-  
 }
